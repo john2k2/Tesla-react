@@ -131,7 +131,7 @@ const Header = () => {
           </ul>
           <nav className="col-span-1 grid w-full justify-end  gap-4 pr-10 xl:hidden">
             <a
-              className="backdrop-blur-xxl flex w-full rounded-xl bg-black/10 px-4 py-3 transition-all ease-in-out"
+              className="backdrop-blur-xxl flex w-full rounded-xl bg-black/10 px-5 py-2 text-sm font-semibold transition-all ease-in-out"
               href="#"
             >
               Menu
@@ -139,18 +139,6 @@ const Header = () => {
           </nav>
         </nav>
       </header>
-      <Hero
-        menu={menu}
-        setMenu={setMenu}
-        setMenuEnergy={setMenuEnergy}
-        menuEnergy={menuEnergy}
-        menuCharging={menuCharging}
-        setMenuCharging={setMenuCharging}
-        menuDiscover={menuDiscover}
-        setMenuDiscover={setMenuDiscover}
-        menuShop={menuShop}
-        setMenuShop={setMenuShop}
-      />
       {
         <div
           className={`absolute top-0 z-30 flex h-[50%] w-full content-center items-center bg-white ${
@@ -158,6 +146,17 @@ const Header = () => {
               ? "animate-ease-in-out translate-y-0 transform transition-all duration-[0.6s]"
               : "-translate-y-full transform transition-all duration-[0.7s] "
           }`}
+          onMouseLeave={
+            setMenu ||
+            setMenuEnergy ||
+            setMenuCharging ||
+            setMenuDiscover ||
+            setMenuShop
+              ? () => {
+                  resetMenuStates();
+                }
+              : {}
+          }
         >
           <div className="mx-auto flex h-full w-[1270px] animate-fade-out">
             {menu && <MenuocultoVehicles menu={menu} />}
