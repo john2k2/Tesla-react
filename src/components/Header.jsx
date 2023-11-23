@@ -131,7 +131,7 @@ const Header = () => {
           </ul>
           <nav className="col-span-1 grid w-full justify-end  gap-4 pr-10 xl:hidden">
             <a
-              className="backdrop-blur-xxl flex w-full rounded-xl px-4 py-3 transition-all ease-in-out hover:bg-black/5"
+              className="backdrop-blur-xxl flex w-full rounded-xl bg-black/10 px-4 py-3 transition-all ease-in-out"
               href="#"
             >
               Menu
