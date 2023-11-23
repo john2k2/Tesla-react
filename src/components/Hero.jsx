@@ -22,7 +22,7 @@ export const Hero = ({
 
   return (
     <>
-      <section className="h-screen w-full text-center relative overflow-hidden ">
+      <section className="relative h-screen w-full overflow-hidden text-center ">
         <section
           {...(setMenuEnergy ||
           setMenu ||
@@ -31,31 +31,31 @@ export const Hero = ({
           setMenuShop
             ? { onMouseEnter: resetMenuStates }
             : {})}
-          className={`relative flex z-20 h-full flex-col justify-center  ${
+          className={`relative z-20 flex h-full flex-col justify-center  ${
             menu ? "bg-black/60 blur-sm transition-all " : ""
           }`}
         >
-          <div className="flex flex-col justify-between h-[90%] ">
-            <div className="flex flex-col items-center pt-32 gap-y-3">
-              <h1 className="text-white text-5xl font-semibold animate-slide-down">
+          <div className="flex h-[95%] flex-col justify-between ">
+            <div className="flex flex-col items-center gap-y-3 pt-32">
+              <h1 className="animate-slide-down text-5xl font-semibold text-white">
                 Model Y
               </h1>
-              <h4 className="text-white text-xl font-semibold animate-slide-down2 ">
+              <h4 className="animate-slide-down2 text-xl font-semibold text-white ">
                 Lease starting at $399/mo*
               </h4>
             </div>
-            <div className="flex flex-col justify-center w-[80%] mx-auto">
-              <div className="flex flex-col gap-5 mx-auto md:justify-center items-center md:flex md:flex-row  ">
+            <div className="mx-auto flex flex-col">
+              <div className="mx-auto flex flex-col items-center gap-5 md:flex md:flex-row md:justify-center">
                 <a
                   className="
-                           md:px-20 px-40 py-2 bg-gray-800/80 text-white rounded-md font-semibold capitalize animate-fade-in text-sm md:text-base
+                           animate-fade-in rounded-md bg-gray-800/80 px-32 py-2 text-sm font-semibold capitalize text-white md:px-20 md:text-base
                             "
                   href="#"
                 >
                   Order Now
                 </a>
                 <a
-                  className="px-40 py-2 bg-white/60 text-black rounded-md font-semibold capitalize animate-fade-in text-sm md:text-base md:px-20
+                  className="animate-fade-in rounded-md bg-white/60 px-32 py-2 text-sm font-semibold capitalize text-black md:px-20 md:text-base
                             "
                   href="#"
                 >
@@ -63,11 +63,13 @@ export const Hero = ({
                 </a>
               </div>
 
-              <div>
-                <p className="z-40 text-white text-sm pt-5">
+              <div className="z-40 mx-auto w-[90%]  pt-5 text-sm text-white md:text-base xl:w-full">
+                <p>
                   *Excludes taxes and fees with price subject to change.
-                  Available in select states.{" "}
-                  <span className="underline">See Details</span>
+                  Available in select states.
+                  <a className="px-1 underline" href="#">
+                    See Details
+                  </a>
                 </p>
               </div>
             </div>

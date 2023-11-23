@@ -4,10 +4,10 @@ const Menuoculto = () => {
   return (
     <>
       <div
-        className={`absolute top-0 left-0 w-full h-[50%] bg-white z-30 flex content-center ${
+        className={`absolute left-0 top-0 z-30 flex h-[50%] w-full content-center ${
           menuCharging
-            ? "transform translate-y-0 transition-all duration-[0.6s] animate-ease-in-out"
-            : "transform -translate-y-full transition-all duration-[0.7s] "
+            ? "animate-ease-in-out translate-y-0 transform transition-all duration-[0.6s]"
+            : "-translate-y-full transform transition-all duration-[0.7s] "
         }`}
       ></div>
     </>

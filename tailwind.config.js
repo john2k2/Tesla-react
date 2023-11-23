@@ -55,5 +55,9 @@ export default {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    {
+      plugins: ["prettier-plugin-tailwindcss"],
+    },
+  ],
 };

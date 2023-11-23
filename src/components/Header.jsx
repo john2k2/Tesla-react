@@ -36,7 +36,7 @@ const Header = () => {
     <>
       <header
         className={`
-             grid  w-full h-20  items-center  fixed z-50 grid-cols-3 ${
+             fixed  z-50 grid  h-20  w-full grid-cols-2 items-center xl:grid-cols-3    ${
                menu || menuEnergy || menuCharging || menuDiscover || menuShop
                  ? "text-black "
                  : "text-white"
@@ -47,11 +47,11 @@ const Header = () => {
             <Logo />
           </div>
         </div>
-        <nav className="">
-          <ul className="md:flex justify-center text-base font-semibold capitalize hidden ">
+        <nav className="hidden xl:block">
+          <ul className="hidden justify-center text-base font-semibold capitalize md:flex ">
             <li>
               <a
-                className="py-2 px-4 rounded-xl hover:backdrop-blur-xl transition-all  ease-in-out hover:bg-black/5 "
+                className="rounded-xl px-4 py-2 transition-all ease-in-out  hover:bg-black/5 hover:backdrop-blur-xl "
                 onMouseEnter={() => {
                   resetMenuStates();
                   setMenu(true);
@@ -63,7 +63,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                className="py-2 px-4 rounded-xl hover:backdrop-blur-xl transition-all  ease-in-out hover:bg-black/5 "
+                className="rounded-xl px-4 py-2 transition-all ease-in-out  hover:bg-black/5 hover:backdrop-blur-xl "
                 onMouseEnter={() => {
                   resetMenuStates();
                   setMenuEnergy(true);
@@ -75,7 +75,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                className="py-2 px-4 rounded-xl hover:backdrop-blur-xl transition-all  ease-in-out hover:bg-black/5 "
+                className="rounded-xl px-4 py-2 transition-all ease-in-out  hover:bg-black/5 hover:backdrop-blur-xl "
                 onMouseEnter={() => {
                   resetMenuStates();
                   setMenuCharging(true);
@@ -87,7 +87,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                className="py-2 px-4 rounded-xl hover:backdrop-blur-xl transition-all  ease-in-out hover:bg-black/5 "
+                className="rounded-xl px-4 py-2 transition-all ease-in-out  hover:bg-black/5 hover:backdrop-blur-xl "
                 onMouseEnter={() => {
                   resetMenuStates();
                   setMenuDiscover(true);
@@ -99,7 +99,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                className="py-2 px-4 hover:bg-black/5 rounded-xl hover:backdrop-blur-sm transition-all  ease-in-out"
+                className="rounded-xl px-4 py-2 transition-all ease-in-out hover:bg-black/5  hover:backdrop-blur-sm"
                 onMouseEnter={() => {
                   resetMenuStates();
                   setMenuShop(true);
@@ -112,7 +112,7 @@ const Header = () => {
           </ul>
         </nav>
         <nav>
-          <ul className="hidden md:flex justify-end gap-4 pr-10 ">
+          <ul className="hidden justify-end gap-4 pr-10 xl:flex">
             <li>
               <a href="#">
                 <Iconopregunta />
@@ -129,9 +129,9 @@ const Header = () => {
               </a>
             </li>
           </ul>
-          <nav className="justify-end gap-4 pr-10 flex md:hidden  ">
+          <nav className="col-span-1 grid w-full justify-end  gap-4 pr-10 xl:hidden">
             <a
-              className="py-3 px-4 rounded-xl hover:backdrop-blur-xl transition-all  ease-in-out"
+              className="backdrop-blur-xxl flex w-full rounded-xl bg-black px-4 py-3 transition-all ease-in-out hover:bg-black/5"
               href="#"
             >
               Menu
@@ -153,13 +153,13 @@ const Header = () => {
       />
       {
         <div
-          className={`absolute top-0  w-full h-[50%] bg-white z-30 flex content-center ${
+          className={`absolute top-0 z-30 flex h-[50%] w-full content-center items-center bg-white ${
             menu || menuEnergy || menuCharging || menuDiscover || menuShop
-              ? "transform translate-y-0 transition-all duration-[0.6s] animate-ease-in-out"
-              : "transform -translate-y-full transition-all duration-[0.7s] "
+              ? "animate-ease-in-out translate-y-0 transform transition-all duration-[0.6s]"
+              : "-translate-y-full transform transition-all duration-[0.7s] "
           }`}
         >
-          <div className="flex w-[1270px] mx-auto h-full animate-fade-out">
+          <div className="mx-auto flex h-full w-[1270px] animate-fade-out">
             {menu && <MenuocultoVehicles menu={menu} />}
             {menuEnergy && <MenuocultoEnergy menuEnergy={menuEnergy} />}
             {menuCharging && <MenuocultoCharging menuCharging={menuCharging} />}
