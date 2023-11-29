@@ -2,10 +2,10 @@ import React from "react";
 
 const MenuocultoDiscover = () => {
   return (
-    <div className="w-[70%] mx-auto flex  justify-around items-baseline">
-      <nav className="  h-[81%] flex flex-col justify-center ">
-        <h2 className="text-lg py-4 font-bold text-black">Resources</h2>
-        <ul className="flex gap-4 flex-col items-start font-bold capitalize text-black/60 w-[150px] text-sm">
+    <div className="mx-auto flex w-[70%]  items-baseline justify-around">
+      <nav className="  flex h-[81%] flex-col justify-center ">
+        <h2 className="py-4 text-lg font-bold text-black">Resources</h2>
+        <ul className="flex w-[150px] flex-col items-start gap-4 text-sm font-bold capitalize text-black/60">
           <li>
             <a href="">demo drive</a>
           </li>
@@ -23,9 +23,9 @@ const MenuocultoDiscover = () => {
           </li>
         </ul>
       </nav>
-      <nav className="  h-[81%] flex flex-col justify-center ">
-        <h2 className="text-lg py-4 font-bold text-black">Location Services</h2>
-        <ul className="flex gap-4 flex-col items-start font-bold capitalize text-black/60 w-[150px] text-sm">
+      <nav className="  flex h-[81%] flex-col justify-center ">
+        <h2 className="py-4 text-lg font-bold text-black">Location Services</h2>
+        <ul className="flex w-[150px] flex-col items-start gap-4 text-sm font-bold capitalize text-black/60">
           <li>
             <a href="">Find Us</a>
           </li>
@@ -40,9 +40,9 @@ const MenuocultoDiscover = () => {
           </li>
         </ul>
       </nav>
-      <nav className="  h-[81%] flex flex-col justify-center ">
-        <h2 className="text-lg py-4 font-bold text-black">Company</h2>
-        <ul className="flex gap-4 flex-col items-start font-bold capitalize text-black/60 w-[150px] text-sm">
+      <nav className="  flex h-[81%] flex-col justify-center ">
+        <h2 className="py-4 text-lg font-bold text-black">Company</h2>
+        <ul className="flex w-[150px] flex-col items-start gap-4 text-sm font-bold capitalize text-black/60">
           <li>
             <a href="">About</a>
           </li>

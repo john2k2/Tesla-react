@@ -1,18 +1,18 @@
 import React from "react";
-import { Cardauto } from "./Cardauto";
+import { Cardauto } from "../Cardauto";
 
 const MenuocultoEnergy = () => {
   return (
-    <div className="flex w-[1270px] mx-auto justify-center place-items-center py-7 gap-10">
-      <div className=" flex mx-auto flex-wrap w-[900px] justify-center ">
+    <div className="mx-auto flex w-[1270px] place-items-center justify-center gap-10 py-7">
+      <div className=" mx-auto flex w-[900px] flex-wrap justify-center ">
         <Cardauto model="model s" img="/asset 0.avif" />
         <Cardauto model="model s" img="/asset 1.avif" />
         <Cardauto model="model s" img="/asset 2.avif" />
         <Cardauto model="model s" img="/asset 3.avif" />
       </div>
-      <div className="border-1 bg-black/10 border z-30 w-[1px] h-[81%]"></div>
-      <div className="  h-[81%] flex flex-col justify-center  ">
-        <ul className="flex gap-2 flex-col items-start font-bold capitalize text-black/60 w-[250px] text-sm">
+      <div className="border-1 z-30 h-[81%] w-[1px] border bg-black/10"></div>
+      <div className="  flex h-[81%] flex-col justify-center  ">
+        <ul className="flex w-[250px] flex-col items-start gap-2 text-sm font-bold capitalize text-black/60">
           <li>
             <a href="">schedule a consutation</a>
           </li>

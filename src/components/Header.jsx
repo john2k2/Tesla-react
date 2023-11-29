@@ -9,11 +9,11 @@ import Iconopregunta from "../icons/Iconopregunta";
 
 //menus
 
-import MenuocultoEnergy from "./MenuocultoEnergy";
-import MenuocultoVehicles from "./MenuocultoVehicles";
-import MenuocultoCharging from "./MenuocultoCharging";
-import MenuocultoDiscover from "./MenuocultoDiscover";
-import MenuocultoShop from "./MenuocultoShop";
+import MenuocultoEnergy from "./MenuOculto/MenuocultoEnergy";
+import MenuocultoCharging from "./MenuOculto/MenuocultoCharging";
+import MenuocultoDiscover from "./MenuOculto/MenuocultoDiscover";
+import MenuocultoShop from "./MenuOculto/MenuocultoShop";
+import MenuocultoVehicles from "./MenuOculto/MenuocultoVehicles";
 
 const Header = ({ menuMobile }) => {
   const [menu, setMenu] = useState(false);
@@ -21,9 +21,7 @@ const Header = ({ menuMobile }) => {
   const [menuCharging, setMenuCharging] = useState(false);
   const [menuDiscover, setMenuDiscover] = useState(false);
   const [menuShop, setMenuShop] = useState(false);
-
-  console.log(menuMobile);
-
+  const [text, setText] = useState("black");
   const resetMenuStates = () => {
     if (menu) setMenu(false);
     if (menuEnergy) setMenuEnergy(false);
@@ -38,18 +36,22 @@ const Header = ({ menuMobile }) => {
         className={`
              fixed  z-50 grid  h-20  w-full grid-cols-2 items-center xl:grid-cols-3    ${
                menu || menuEnergy || menuCharging || menuDiscover || menuShop
-                 ? "text-black "
-                 : "text-white"
+                 ? "text-white "
+                 : "text-black"
              } `}
       >
         <div className="flex justify-start pl-10">
           <div>{menuMobile ? "" : <Logo />}</div>
         </div>
-        <nav className="hidden xl:block">
+        <nav
+          className={`hidden xl:block ${
+            text == "black" ? "text-black" : "text-white"
+          } `}
+        >
           <ul className="hidden justify-center text-base font-semibold capitalize md:flex ">
             <li>
               <a
-                className="rounded-xl px-4 py-2 transition-all ease-in-out  hover:bg-black/5 hover:backdrop-blur-xl "
+                className="rounded-xl px-4 py-2 transition-all ease-in-out   hover:bg-black/5 hover:backdrop-blur-xl "
                 onMouseEnter={() => {
                   resetMenuStates();
                   setMenu(true);

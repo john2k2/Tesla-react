@@ -1,19 +1,14 @@
 import React from "react";
 import Footer from "./Footer";
-import BotonBlanco from "./BotonBlanco";
-import BotonNegro from "./BotonNegro";
-import { useState } from "react";
+import BotonBlanco from "./Botones/BotonBlanco";
+import BotonNegro from "./Botones/BotonNegro";
 
 export const Hero = ({
   menu,
   setMenu,
   setMenuEnergy,
-  menuEnergy,
-  menuCharging,
   setMenuCharging,
-  menuDiscover,
   setMenuDiscover,
-  menuShop,
   setMenuShop,
   model,
   subtitle,
@@ -27,7 +22,6 @@ export const Hero = ({
   imagen,
   alt,
 }) => {
-  const [menuMobile, setMenuMobile] = useState(false);
   return (
     <>
       <section className="relative h-screen w-full overflow-hidden text-center ">
@@ -39,16 +33,16 @@ export const Hero = ({
           setMenuShop
             ? { onMouseEnter: resetMenuStates }
             : {})}
-          className={`relative z-20 flex h-full flex-col justify-center  ${
+          className={`relative z-20 flex h-full flex-col justify-center   ${
             menu ? "bg-black/60 blur-sm transition-all " : ""
           }`}
         >
           <div className="flex h-[95%] flex-col justify-between ">
             <div className="flex flex-col items-center gap-y-3 pt-32">
-              <h1 className="animate-slide-down text-5xl font-semibold text-white">
+              <h1 className="animate-slide-down text-5xl font-semibold text-black">
                 {model}
               </h1>
-              <h4 className="flex animate-slide-down2 flex-col text-xl font-semibold text-white  ">
+              <h4 className="flex animate-slide-down2 flex-col text-xl font-semibold text-black  ">
                 {subtitle}
                 <span className="text-base font-normal">{span}</span>
                 <a href="#">{link}</a>

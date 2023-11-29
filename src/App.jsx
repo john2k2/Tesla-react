@@ -8,20 +8,23 @@ function App() {
         <div className="snap-center">
           <Header />
           <Hero
-            model="Model Y"
-            subtitle="Lease starting at $399/mo*"
-            botton1="order now"
+            model={<span className="text-white">Model Y</span>}
+            subtitle={<span className="text-white">Lease for $399/mo*</span>}
+            botton1="order
+          now"
             botton2="demo drive"
-            footertext="*Excludes taxes and fees with price subject to change. Available in select states."
-            footerlink="See Details"
+            footertext="*Excludes taxes and fees with
+          price subject to change. Available in select states."
+            footerlink="See
+          Details"
             video="/Homepage-Model-Y-Desktop-NA.webm"
           />
         </div>
         <div className="snap-center">
           <Header />
           <Hero
-            model="Model 3"
-            subtitle="Lease starting at $329/mo*"
+            model={<span className="text-white">Model 3</span>}
+            subtitle={<span className="text-white">Lease for $329/mo*</span>}
             botton1="order now"
             botton2="demo drive"
             footertext="*Excludes taxes and fees with price subject to change. Available in select states."
@@ -58,10 +61,11 @@ function App() {
         <div className="snap-center">
           <Header />
           <Hero
-            model="Experience Tesla"
-            subtitle="Schedule a Demo Drive Today"
-            botton1="Demo Drive"
-            botton2="Cambiar"
+            model={<span className="text-white">Experience Tesla</span>}
+            subtitle={
+              <span className="text-white">Schedule a Demo Drive Today</span>
+            }
+            botton1={<span className="bg-transparent">demo drive</span>}
             video="Home.webm"
           />
         </div>
@@ -69,7 +73,11 @@ function App() {
           <Header />
           <Hero
             model="Solar Panels"
-            link="Schedule a Virtual Consultation"
+            link={
+              <span className="text-lg font-light underline">
+                Schedule a Virtual Consultation
+              </span>
+            }
             botton1="order now"
             botton2="Learn more"
             imagen="asset 19.jpeg"
@@ -79,7 +87,11 @@ function App() {
           <Header />
           <Hero
             model="Solar Roof"
-            subtitle="Plaid"
+            subtitle={
+              <span className="text-lg font-light ">
+                Produce Clean Energy From Your Roof
+              </span>
+            }
             botton1="order now"
             botton2="learn more"
             imagen="asset 20.jpeg"

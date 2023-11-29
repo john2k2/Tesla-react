@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <ol className="flex gap-5 text-sm font-normal capitalize text-white/70">
+      <ol className="flex justify-center gap-5 text-sm font-normal capitalize text-white/70">
         <li>
           <a href="">Tesla c 2023</a>
         </li>
