@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "./Footer";
 import BotonBlanco from "./BotonBlanco";
 import BotonNegro from "./BotonNegro";
+import { useState } from "react";
 
 export const Hero = ({
   menu,
@@ -26,6 +27,7 @@ export const Hero = ({
   imagen,
   alt,
 }) => {
+  const [menuMobile, setMenuMobile] = useState(false);
   return (
     <>
       <section className="relative h-screen w-full overflow-hidden text-center ">

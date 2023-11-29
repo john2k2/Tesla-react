@@ -1,8 +1,6 @@
 import React from "react";
 import { useState } from "react";
 
-import Hero from "./Hero";
-
 //icons
 import Logo from "../icons/Logo";
 import Idioma from "../icons/Idioma";
@@ -17,12 +15,14 @@ import MenuocultoCharging from "./MenuocultoCharging";
 import MenuocultoDiscover from "./MenuocultoDiscover";
 import MenuocultoShop from "./MenuocultoShop";
 
-const Header = () => {
+const Header = ({ menuMobile }) => {
   const [menu, setMenu] = useState(false);
   const [menuEnergy, setMenuEnergy] = useState(false);
   const [menuCharging, setMenuCharging] = useState(false);
   const [menuDiscover, setMenuDiscover] = useState(false);
   const [menuShop, setMenuShop] = useState(false);
+
+  console.log(menuMobile);
 
   const resetMenuStates = () => {
     if (menu) setMenu(false);
@@ -43,9 +43,7 @@ const Header = () => {
              } `}
       >
         <div className="flex justify-start pl-10">
-          <div>
-            <Logo />
-          </div>
+          <div>{menuMobile ? "" : <Logo />}</div>
         </div>
         <nav className="hidden xl:block">
           <ul className="hidden justify-center text-base font-semibold capitalize md:flex ">
@@ -131,7 +129,10 @@ const Header = () => {
           </ul>
           <nav className="col-span-1 grid w-full justify-end  gap-4 pr-10 xl:hidden">
             <a
-              className="backdrop-blur-xxl flex w-full rounded-xl bg-black/10 px-5 py-2 text-sm font-semibold transition-all ease-in-out"
+              className="backdrop-blur-xxl z-20 flex  rounded-xl bg-black/10 px-5 py-2 text-sm font-semibold transition-all ease-in-out"
+              onClick={() => {
+                setMenuMobile(!menuMobile);
+              }}
               href="#"
             >
               Menu
