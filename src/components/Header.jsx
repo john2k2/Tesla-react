@@ -15,13 +15,14 @@ import MenuocultoDiscover from "./MenuOculto/MenuocultoDiscover";
 import MenuocultoShop from "./MenuOculto/MenuocultoShop";
 import MenuocultoVehicles from "./MenuOculto/MenuocultoVehicles";
 
-const Header = ({ menuMobile }) => {
+const Header = ({ menuMobile, headerColor }) => {
   const [menu, setMenu] = useState(false);
   const [menuEnergy, setMenuEnergy] = useState(false);
   const [menuCharging, setMenuCharging] = useState(false);
   const [menuDiscover, setMenuDiscover] = useState(false);
   const [menuShop, setMenuShop] = useState(false);
-  const [text, setText] = useState("black");
+  const [menumobile, setMenuMobile] = useState(false);
+
   const resetMenuStates = () => {
     if (menu) setMenu(false);
     if (menuEnergy) setMenuEnergy(false);
@@ -33,25 +34,20 @@ const Header = ({ menuMobile }) => {
   return (
     <>
       <header
-        className={`
-             fixed  z-50 grid  h-20  w-full grid-cols-2 items-center xl:grid-cols-3    ${
-               menu || menuEnergy || menuCharging || menuDiscover || menuShop
-                 ? "text-white "
-                 : "text-black"
-             } `}
+        className={`absolute z-50 grid  h-20  w-full grid-cols-2  items-center xl:grid-cols-3 ${
+          menu || menuEnergy || menuCharging || menuDiscover || menuShop
+            ? "text-black"
+            : headerColor
+        }`}
       >
         <div className="flex justify-start pl-10">
           <div>{menuMobile ? "" : <Logo />}</div>
         </div>
-        <nav
-          className={`hidden xl:block ${
-            text == "black" ? "text-black" : "text-white"
-          } `}
-        >
+        <nav className={"hidden xl:block "}>
           <ul className="hidden justify-center text-base font-semibold capitalize md:flex ">
             <li>
               <a
-                className="rounded-xl px-4 py-2 transition-all ease-in-out   hover:bg-black/5 hover:backdrop-blur-xl "
+                className="ease-in-outhover:bg-black/5 rounded-xl px-4 py-2 transition-all hover:bg-black/5 hover:backdrop-blur-xl "
                 onMouseEnter={() => {
                   resetMenuStates();
                   setMenu(true);
@@ -63,7 +59,7 @@ const Header = ({ menuMobile }) => {
             </li>
             <li>
               <a
-                className="rounded-xl px-4 py-2 transition-all ease-in-out  hover:bg-black/5 hover:backdrop-blur-xl "
+                className="ease-in-outhover:bg-black/5 rounded-xl px-4 py-2 transition-all hover:bg-black/5 hover:backdrop-blur-xl "
                 onMouseEnter={() => {
                   resetMenuStates();
                   setMenuEnergy(true);
@@ -144,10 +140,10 @@ const Header = ({ menuMobile }) => {
       </header>
       {
         <div
-          className={`absolute top-0 z-30 flex h-[50%] w-full content-center items-center bg-white ${
+          className={`absolute z-30 hidden w-full content-center items-center bg-white md:flex ${
             menu || menuEnergy || menuCharging || menuDiscover || menuShop
-              ? "animate-ease-in-out translate-y-0 transform transition-all duration-[0.6s]"
-              : "-translate-y-full transform transition-all duration-[0.7s] "
+              ? "animate-ease-in-out h-[40%] translate-y-0 transform transition-all duration-[0.6s]"
+              : "h-0 -translate-y-full transform transition-all duration-[0.7s]"
           }`}
           onMouseLeave={
             setMenu ||

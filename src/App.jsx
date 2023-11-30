@@ -1,12 +1,13 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import "./components/Header.css";
 
 function App() {
   return (
     <>
       <main className="relative h-screen w-full snap-y snap-mandatory overflow-auto">
         <div className="snap-center">
-          <Header />
+          <Header headerColor="text-white" />
           <Hero
             model={<span className="text-white">Model Y</span>}
             subtitle={<span className="text-white">Lease for $399/mo*</span>}
@@ -21,7 +22,7 @@ function App() {
           />
         </div>
         <div className="snap-center">
-          <Header />
+          <Header headerColor="text-white" />
           <Hero
             model={<span className="text-white">Model 3</span>}
             subtitle={<span className="text-white">Lease for $329/mo*</span>}
@@ -33,7 +34,7 @@ function App() {
           />
         </div>
         <div className="snap-center">
-          <Header />
+          <Header headerColor="text-black" />
           <Hero
             model="Model X"
             subtitle="From $68,590*"
@@ -46,7 +47,7 @@ function App() {
           />
         </div>
         <div className="snap-center">
-          <Header />
+          <Header headerColor="text-black" />
           <Hero
             model="Model S"
             subtitle="From $71,090*"
@@ -59,7 +60,7 @@ function App() {
           />
         </div>
         <div className="snap-center">
-          <Header />
+          <Header headerColor="text-white" />
           <Hero
             model={<span className="text-white">Experience Tesla</span>}
             subtitle={
@@ -70,7 +71,7 @@ function App() {
           />
         </div>
         <div className="snap-center">
-          <Header />
+          <Header headerColor="text-black" />
           <Hero
             model="Solar Panels"
             link={
@@ -84,7 +85,7 @@ function App() {
           />
         </div>
         <div className="snap-center">
-          <Header />
+          <Header headerColor="text-black" />
           <Hero
             model="Solar Roof"
             subtitle={
@@ -98,7 +99,7 @@ function App() {
           />
         </div>
         <div className="snap-center">
-          <Header />
+          <Header headerColor="text-black" />
           <Hero
             model="Powerwall"
             botton1="order now"
@@ -107,7 +108,7 @@ function App() {
           />
         </div>
         <div className="snap-center">
-          <Header />
+          <Header headerColor="text-black" />
           <Hero model="Accessories" botton2="shop now" imagen="asset 22.avif" />
         </div>
       </main>
