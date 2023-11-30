@@ -43,7 +43,7 @@ const Header = ({ menuMobile, headerColor }) => {
         <div className="flex justify-start pl-10">
           <div>{menuMobile ? "" : <Logo />}</div>
         </div>
-        <nav className={"hidden xl:block "}>
+        <nav className="hidden xl:block ">
           <ul className="hidden justify-center text-base font-semibold capitalize md:flex ">
             <li>
               <a
@@ -142,7 +142,7 @@ const Header = ({ menuMobile, headerColor }) => {
         <div
           className={`absolute z-30 hidden w-full content-center items-center bg-white md:flex ${
             menu || menuEnergy || menuCharging || menuDiscover || menuShop
-              ? "animate-ease-in-out h-[40%] translate-y-0 transform transition-all duration-[0.6s]"
+              ? "animate-ease-in-out h-[50%] translate-y-0 transform transition-all duration-[0.6s]"
               : "h-0 -translate-y-full transform transition-all duration-[0.7s]"
           }`}
           onMouseLeave={
